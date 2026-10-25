@@ -1,0 +1,9 @@
+{"task_id":"widget-config","condition":"repository","answer":"The cache timeout default is 30 seconds.","human_review":{"goal_met":false,"critical_context_missing":true,"unsupported_claim_count":1}}
+{"task_id":"widget-config","condition":"notes","answer":"Add the cache timeout with a default of 30 seconds.","human_review":{"goal_met":true,"critical_context_missing":false,"unsupported_claim_count":0}}
+{"task_id":"widget-config","condition":"packet","answer":"Set cache timeout to 30 seconds and leave retry policy unchanged.","human_review":{"goal_met":true,"critical_context_missing":false,"unsupported_claim_count":0}}
+{"task_id":"test-boundary","condition":"repository","answer":"The parser accepts at most 64 items.","human_review":{"goal_met":false,"critical_context_missing":true,"unsupported_claim_count":0}}
+{"task_id":"test-boundary","condition":"notes","answer":"Test 64 accepted and 65 rejected.","human_review":{"goal_met":true,"critical_context_missing":false,"unsupported_claim_count":0}}
+{"task_id":"test-boundary","condition":"packet","answer":"Assert 64 accepted and 65 rejected; preserve the current parser API.","human_review":{"goal_met":true,"critical_context_missing":false,"unsupported_claim_count":0}}
+{"task_id":"migration-order","condition":"repository","answer":"Copy records, then remove the old index.","human_review":{"goal_met":false,"critical_context_missing":true,"unsupported_claim_count":0}}
+{"task_id":"migration-order","condition":"notes","answer":"Copy records, verify count, then remove the old index.","human_review":{"goal_met":true,"critical_context_missing":false,"unsupported_claim_count":0}}
+{"task_id":"migration-order","condition":"packet","answer":"Copy records, verify count, only then remove the old index.","human_review":{"goal_met":true,"critical_context_missing":false,"unsupported_claim_count":0}}

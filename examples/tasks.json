@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "conditions": ["repository", "notes", "packet"],
+  "tasks": [
+    {
+      "id": "widget-config",
+      "prompt": "Summarize the intended widget configuration change.",
+      "contexts": {
+        "repository": "Synthetic repo: widgets use TOML. A pending change adds a cache timeout.",
+        "notes": "Synthetic note: add cache timeout; default is 30 seconds.",
+        "packet": "Synthetic handoff: edit widget.toml; timeout default 30 seconds; do not change retry policy."
+      },
+      "required_terms": ["cache timeout", "30 seconds"],
+      "forbidden_terms": ["retry policy changed"]
+    },
+    {
+      "id": "test-boundary",
+      "prompt": "State the exact boundary for the synthetic parser test.",
+      "contexts": {
+        "repository": "Synthetic parser accepts up to 64 items.",
+        "notes": "Test 64 accepted and 65 rejected.",
+        "packet": "Boundary handoff: assert 64 accepted; assert 65 rejected; preserve current parser API."
+      },
+      "required_terms": ["64 accepted", "65 rejected"],
+      "forbidden_terms": ["change parser api"]
+    },
+    {
+      "id": "migration-order",
+      "prompt": "Describe the safe synthetic migration sequence.",
+      "contexts": {
+        "repository": "Synthetic migration copies records before removing the old index.",
+        "notes": "Copy records, verify count, then remove old index.",
+        "packet": "Handoff sequence: copy records; verify count; only then remove the old index."
+      },
+      "required_terms": ["copy records", "verify count", "remove the old index"],
+      "forbidden_terms": ["remove the old index first"]
+    }
+  ]
+}

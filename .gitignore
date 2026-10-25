@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.coverage
+.pytest_cache/
+.env
+.env.*
+!.env.example
+report.json
+*.report.json
+/answers.jsonl
+**/answers.private.jsonl
+**/*.answers.private.jsonl
+**/private-runs/
+**/private-reports/
